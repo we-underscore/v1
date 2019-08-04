@@ -6,8 +6,9 @@ import {
   IconCodepen,
   IconInstagram,
   IconTwitter,
-  IconStar,
-  IconFork,
+  // IconStar,
+  // IconFork,
+  IconVimeo,
 } from '@components/icons';
 import { socialMedia } from '@config';
 import styled from 'styled-components';
@@ -48,26 +49,26 @@ const Copy = styled.div`
   font-size: ${fontSizes.xsmall};
   line-height: 1;
 `;
-const GithubLink = styled.a`
-  color: ${colors.slate};
-`;
-const GithubInfo = styled.div`
-  margin-top: 10px;
+// const GithubLink = styled.a`
+//   color: ${colors.slate};
+// `;
+// const GithubInfo = styled.div`
+//   margin-top: 10px;
 
-  & > span {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 7px;
-  }
-  svg {
-    display: inline-block;
-    height: 15px;
-    width: auto;
-    margin-right: 5px;
-  }
-`;
+//   & > span {
+//     display: inline-flex;
+//     align-items: center;
+//     margin: 0 7px;
+//   }
+//   svg {
+//     display: inline-block;
+//     height: 15px;
+//     width: auto;
+//     margin-right: 5px;
+//   }
+// `;
 
-const Footer = ({ githubInfo }) => (
+const Footer = () => (
   <FooterContainer>
     <SocialContainer>
       <SocialItemList>
@@ -89,6 +90,8 @@ const Footer = ({ githubInfo }) => (
                   <IconInstagram />
                 ) : name === 'Twitter' ? (
                   <IconTwitter />
+                ) : name === 'Vimeo' ? (
+                  <IconVimeo />
                 ) : (
                   <IconGithub />
                 )}
@@ -98,25 +101,14 @@ const Footer = ({ githubInfo }) => (
       </SocialItemList>
     </SocialContainer>
     <Copy>
-      <GithubLink
-        href="https://github.com/bchiang7/v4"
-        target="_blank"
-        rel="nofollow noopener noreferrer">
-        <div>Designed &amp; Built by Brittany Chiang</div>
-
-        {githubInfo.stars && githubInfo.forks && (
-          <GithubInfo>
-            <span>
-              <IconStar />
-              <span>{githubInfo.stars}</span>
-            </span>
-            <span>
-              <IconFork />
-              <span>{githubInfo.forks}</span>
-            </span>
-          </GithubInfo>
-        )}
-      </GithubLink>
+      <div>&copy; 2019 underscore, all right reserved.</div>
+      <div>
+        Made with{' '}
+        <span role="img" aria-label="Heart">
+          &#128156;
+        </span>{' '}
+        in Seoul
+      </div>
     </Copy>
   </FooterContainer>
 );

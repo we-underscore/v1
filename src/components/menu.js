@@ -59,7 +59,7 @@ const NavListItem = styled.li`
   &:before {
     display: block;
     content: '0' counter(item) '.';
-    color: ${colors.green};
+    color: ${colors.underscoreGrey};
     font-size: ${fontSizes.small};
     margin-bottom: 5px;
   }
@@ -104,7 +104,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
               ))}
           </NavList>
           <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
-            Resume
+            hello
           </ResumeLink>
         </NavLinks>
       </Sidebar>

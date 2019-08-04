@@ -16,6 +16,29 @@ const HeroContainer = styled(Section)`
     width: 100%;
   }
 `;
+
+const VideoWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  iframe {
+    width: 100vw;
+    height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+    min-height: 100vh;
+    min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
+
 const Hi = styled.h1`
   color: ${colors.green};
   margin: 0 0 20px 3px;
@@ -27,6 +50,7 @@ const Hi = styled.h1`
 `;
 const Name = styled.h2`
   font-size: 80px;
+  color: ${colors.underscoreWhite};
   line-height: 1.1;
   margin: 0;
   ${media.desktop`font-size: 70px;`};
@@ -35,13 +59,13 @@ const Name = styled.h2`
   ${media.phone`font-size: 40px;`};
 `;
 const Subtitle = styled.h3`
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1.1;
-  color: ${colors.slate};
-  ${media.desktop`font-size: 70px;`};
-  ${media.tablet`font-size: 60px;`};
-  ${media.phablet`font-size: 50px;`};
-  ${media.phone`font-size: 40px;`};
+  color: ${colors.underscoreBlack};
+  ${media.desktop`font-size: 50px;`};
+  ${media.tablet`font-size: 40px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 30px;`};
 `;
 const Blurb = styled.div`
   margin-top: 25px;
@@ -56,7 +80,7 @@ const EmailLink = styled.a`
   margin-top: 50px;
 `;
 
-const Hero = ({ data }) => {
+const Intro = ({ data }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -67,7 +91,7 @@ const Hero = ({ data }) => {
   const { frontmatter, html } = data[0].node;
 
   const one = () => <Hi style={{ transitionDelay: '100ms' }}>{frontmatter.title}</Hi>;
-  const two = () => <Name style={{ transitionDelay: '200ms' }}>{frontmatter.name}.</Name>;
+  const two = () => <Name style={{ transitionDelay: '200ms' }}>{frontmatter.name}</Name>;
   const three = () => (
     <Subtitle style={{ transitionDelay: '300ms' }}>{frontmatter.subtitle}</Subtitle>
   );
@@ -83,21 +107,32 @@ const Hero = ({ data }) => {
   const items = [one, two, three, four, five];
 
   return (
-    <HeroContainer>
-      <TransitionGroup>
-        {isMounted &&
-          items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={3000}>
-              {item}
-            </CSSTransition>
-          ))}
-      </TransitionGroup>
-    </HeroContainer>
+    <React.Fragment>
+      <HeroContainer>
+        <VideoWrapper>
+          <iframe
+            title="intro"
+            src="https://player.vimeo.com/video/253460314?background=1&autoplay=1&loop=1&byline=0&title=0"
+            frameBorder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowFullScreen></iframe>
+        </VideoWrapper>
+        <TransitionGroup>
+          {isMounted &&
+            items.map((item, i) => (
+              <CSSTransition key={i} classNames="fadeup" timeout={3000}>
+                {item}
+              </CSSTransition>
+            ))}
+        </TransitionGroup>
+      </HeroContainer>
+    </React.Fragment>
   );
 };
 
-Hero.propTypes = {
+Intro.propTypes = {
   data: PropTypes.array.isRequired,
 };
 
-export default Hero;
+export default Intro;

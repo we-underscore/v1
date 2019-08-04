@@ -1,19 +1,27 @@
 ---
-title: 'About Me'
-avatar: './me.jpg'
+title: 'about'
+avatar: './photo_2019-08-04_00-49-18.jpg'
 skills:
-  - JavaScript (ES6+)
-  - HTML & (S)CSS
-  - React
-  - Vue
-  - Node.js
-  - Express
-  - GraphQL
-  - NativeScript
+  - Artistic Research
+  - 초능력
 ---
 
-Hello! I'm Brittany, a software engineer based in Boston, MA who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient and modern backends.
+**언더스코어\_underscore**는 백인경, 심하경으로 구성된 리서치 아티스트 팀입니다.
 
-Shortly after graduating from [Northeastern University](https://www.ccis.northeastern.edu/), I joined the engineering team at [Upstatement](https://www.upstatement.com/) where I work on a wide variety of interesting and meaningful projects on a daily basis.
+시각디자인을 전공한 백인경과 영문학을 전공한 심하경은 서울대학교 인문대학 대학원 공연예술학 협동과정에서 만나 연구와 창작 활동을 함께 해 오다가, 2018년부터 "언더스코어"라는 이름으로 퍼포먼스의 관점에서 (from a performing arts perspective) 동시대를 사유하는 작업을 수행하고 있습니다.
 
-Here's a few technologies I've been working with recently:
+언더스코어는
+
+"underscore": 읽기와 밑줄치기를 통해 문제를 설정하고 그에 대한 연구를 진행합니다.
+
+"**\_\_**": (text/narrative/concept)\_(audio/visual/kinesthetic): 감각적인 것에 텍스트/내러티브/컨셉을 잇습니다.
+
+"**\_score**": (미적 형식으로서의/미래의) 퍼포먼스를 가능하게 하는 것으로서 스코어를 다룹니다.
+
+"(working) **under** (the) **score**": 스코어에 따른 퍼포먼스를 수행합니다.
+
+우리는 세계를 만나고 이해하는 방식을 언제나 의심하고 문제시하여 감각과 지각의 확장 가능성을 타진하고자 합니다. 그렇게 하기 위해 우리는:
+
+- 스스로를 근대적 주체로서 구성된 자아가 아닌 주체화하고 구성하는 존재로 이해하고,
+- 예술제도를 절대적이거나 고정불변하는 것이 아니라 역사적이며 우연적인 것으로서 상정하며,
+- 매체를 (아날로그/디지털 구분 없이) 동시대의 조건으로 받아들여 다루고 있습니다.

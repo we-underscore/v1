@@ -1,11 +1,11 @@
 {
-  "name": "v4",
-  "description": "Personal Website V4",
+  "name": "underscore-webpage",
+  "description": "underscore main webpage",
   "version": "1.0.0",
-  "author": "Brittany Chiang <brittany.chiang@gmail.com>",
+  "author": "Eunchurn Park <eunchurn.park@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bchiang7/v4"
+    "url": "https://github.com/we-underscore/v1"
   },
   "keywords": [
     "gatsby"
@@ -13,10 +13,11 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p 3100 --host=0.0.0.0",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "lint:fix": "eslint --fix ./src/**/*.js"
   },
   "husky": {
     "hooks": {
@@ -30,6 +31,7 @@
     ]
   },
   "dependencies": {
+    "@u-wave/react-vimeo": "^0.8.1",
     "animejs": "^3.0.1",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.13.21",

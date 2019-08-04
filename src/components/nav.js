@@ -15,7 +15,7 @@ const NavContainer = styled.header`
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.navy};
+  background-color: ${colors.underscoreWhite};
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -35,7 +35,7 @@ const Navbar = styled.nav`
   ${mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: ${colors.lightestSlate};
+  color: ${colors.underscoreGrey};
   font-family: ${fonts.SFMono};
   counter-reset: item 0;
   z-index: 12;
@@ -46,10 +46,10 @@ const Logo = styled.div`
 const LogoLink = styled.a`
   display: block;
   color: ${colors.green};
-  width: 42px;
-  height: 42px;
+  width: 160px;
+  height: 40px;
   &:hover,
-  &:focus {
+  &:active {
     svg {
       fill: ${colors.transGreen};
     }
@@ -141,12 +141,20 @@ const NavListItem = styled.li`
   position: relative;
   font-size: ${fontSizes.smallish};
   counter-increment: item 1;
-  &:before {
-    content: '0' counter(item) '.';
-    text-align: right;
-    color: ${colors.green};
-    font-size: ${fontSizes.xsmall};
+  background-image: linear-gradient(120deg, #ff00b0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
   }
+  // &:before {
+  //   content: '0' counter(item) '.';
+  //   text-align: right;
+  //   color: ${colors.green};
+  //   font-size: ${fontSizes.xsmall};
+  // }
 `;
 const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
@@ -281,7 +289,7 @@ class Nav extends Component {
                       href="/resume.pdf"
                       target="_blank"
                       rel="nofollow noopener noreferrer">
-                      Resume
+                      Hello
                     </ResumeLink>
                   </div>
                 </CSSTransition>

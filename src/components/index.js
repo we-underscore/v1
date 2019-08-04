@@ -4,7 +4,7 @@ import Email from './email';
 import Featured from './featured';
 import Footer from './footer';
 import Head from './head';
-import Hero from './hero';
+import Intro from './intro';
 import Jobs from './jobs';
 import Layout from './layout';
 import Loader from './loader';
@@ -20,7 +20,7 @@ export {
   Featured,
   Footer,
   Head,
-  Hero,
+  Intro,
   Jobs,
   Layout,
   Loader,
