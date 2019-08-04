@@ -1,13 +1,11 @@
 module.exports = {
   siteTitle: '_underscore | we underscore',
-  siteDescription:
-    'Brittany Chiang is a software engineer based in Boston, MA who specializes in developing (and occasionally designing) exceptional, high-quality websites and applications.',
-  siteKeywords:
-    'Brittany Chiang, Brittany, Chiang, bchiang7, software engineer, front-end engineer, web developer, javascript, northeastern',
+  siteDescription: 'underscore',
+  siteKeywords: 'underscore, eunchurn',
   siteUrl: 'https://studio-underscore.com',
   siteLanguage: 'en_US',
 
-  googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
+  // googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
 
   name: '_underscore',
   location: 'Seoul',
@@ -48,7 +46,7 @@ module.exports = {
   ],
 
   twitterHandle: '@eunchurn',
-  googleAnalyticsID: 'UA-45666519-2',
+  // googleAnalyticsID: 'UA-45666519-2',
 
   navHeight: 100,
 
